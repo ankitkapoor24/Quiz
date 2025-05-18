@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CG and Stability Quiz (25 Questions)</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 0; }
+    .container { padding: 20px; }
+    .sticky-timer { position: fixed; top: 0; left: 0; right: 0; background: #fff; padding: 10px 20px; z-index: 1000; border-bottom: 2px solid #ccc; font-size: 18px; font-weight: bold; }
+    .question-box { background: #fff; padding: 20px; margin: 80px 20px 20px 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .option { display: block; margin: 10px 0; padding: 8px; border-radius: 4px; border: 1px solid #ccc; cursor: pointer; }
+    .correct { background-color: #c8e6c9; border-color: #2e7d32; }
+    .incorrect { background-color: #ffcdd2; border-color: #c62828; }
+    .highlight-correct { background-color: #bbdefb; border-color: #1565c0; }
+    #summary { margin: 20px; padding: 20px; background: #fff; border-radius: 8px; display: none; }
+    button { margin-top: 15px; padding: 10px 15px; font-size: 16px; }
+  </style>
+</head>
+<body>
+<div id="timer" class="sticky-timer">Time Left: <span class="time-val">30:00</span></div>
+<div class="container">
+
+<div class="question-box" id="q0">
+  <p><strong>Q1. What occurs to the center of pressure as the angle of attack increases within normal flight range?</strong></p>
+  <label class="option"><input type="radio" name="q0" value="It moves toward the trailing edge"> It moves toward the trailing edge</label>
+  <label class="option"><input type="radio" name="q0" value="It remains stationary along the chord line"> It remains stationary along the chord line</label>
+  <label class="option"><input type="radio" name="q0" value="It moves forward along the chord line"> It moves forward along the chord line</label>
+  <label class="option"><input type="radio" name="q0" value="It moves downward along the airfoil surface"> It moves downward along the airfoil surface</label>
+  <button onclick="submitAnswer(0, `It moves forward along the chord line`, `Tests show that as the angle of attack increases, the center of pressure moves forward.`)">Submit</button>
+  <div id="explanation0" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q1">
+  <p><strong>Q2. At very high angles of attack beyond normal flight, how does the center of pressure behave?</strong></p>
+  <label class="option"><input type="radio" name="q1" value="It stabilizes and does not move"> It stabilizes and does not move</label>
+  <label class="option"><input type="radio" name="q1" value="It moves continuously forward"> It moves continuously forward</label>
+  <label class="option"><input type="radio" name="q1" value="It reverses direction and moves backward"> It reverses direction and moves backward</label>
+  <label class="option"><input type="radio" name="q1" value="It shifts to the lower surface of the wing"> It shifts to the lower surface of the wing</label>
+  <button onclick="submitAnswer(1, `It reverses direction and moves backward`, `Beyond a critical angle of attack, the center of pressure begins to move back, contributing to a stall.`)">Submit</button>
+  <div id="explanation1" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q2">
+  <p><strong>Q3. What type of static stability describes an aircraft that returns to its original position after a disturbance?</strong></p>
+  <label class="option"><input type="radio" name="q2" value="Neutral static stability"> Neutral static stability</label>
+  <label class="option"><input type="radio" name="q2" value="Negative static stability"> Negative static stability</label>
+  <label class="option"><input type="radio" name="q2" value="Positive static stability"> Positive static stability</label>
+  <label class="option"><input type="radio" name="q2" value="Dynamic stability"> Dynamic stability</label>
+  <button onclick="submitAnswer(2, `Positive static stability`, `Positive static stability refers to an aircraft's immediate tendency to return to its original state after disturbance.`)">Submit</button>
+  <div id="explanation2" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q3">
+  <p><strong>Q4. What is the expected behavior of an aircraft with neutral static stability after a disturbance?</strong></p>
+  <label class="option"><input type="radio" name="q3" value="Returns to its original position"> Returns to its original position</label>
+  <label class="option"><input type="radio" name="q3" value="Continues away from equilibrium"> Continues away from equilibrium</label>
+  <label class="option"><input type="radio" name="q3" value="Maintains its new position"> Maintains its new position</label>
+  <label class="option"><input type="radio" name="q3" value="Oscillates rapidly"> Oscillates rapidly</label>
+  <button onclick="submitAnswer(3, `Maintains its new position`, `Neutral static stability means the aircraft will stay in the new attitude without returning or diverging.`)">Submit</button>
+  <div id="explanation3" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q4">
+  <p><strong>Q5. Which type of static stability is considered most undesirable in typical aircraft design?</strong></p>
+  <label class="option"><input type="radio" name="q4" value="Positive static stability"> Positive static stability</label>
+  <label class="option"><input type="radio" name="q4" value="Negative static stability"> Negative static stability</label>
+  <label class="option"><input type="radio" name="q4" value="Neutral static stability"> Neutral static stability</label>
+  <label class="option"><input type="radio" name="q4" value="Rotational stability"> Rotational stability</label>
+  <button onclick="submitAnswer(4, `Negative static stability`, `Negative static stability causes the aircraft to move further away from its original position after disturbance.`)">Submit</button>
+  <div id="explanation4" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q5">
+  <p><strong>Q6. Which aircraft type is most likely to require computer assistance due to inherent instability?</strong></p>
+  <label class="option"><input type="radio" name="q5" value="Training aircraft"> Training aircraft</label>
+  <label class="option"><input type="radio" name="q5" value="Commercial jetliners"> Commercial jetliners</label>
+  <label class="option"><input type="radio" name="q5" value="Fighter jets"> Fighter jets</label>
+  <label class="option"><input type="radio" name="q5" value="Gliders"> Gliders</label>
+  <button onclick="submitAnswer(5, `Fighter jets`, `Fighter jets are intentionally built unstable to enhance maneuverability and require computer systems for control.`)">Submit</button>
+  <div id="explanation5" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q6">
+  <p><strong>Q7. Which kind of dynamic stability results in oscillations that decrease over time?</strong></p>
+  <label class="option"><input type="radio" name="q6" value="Positive dynamic stability"> Positive dynamic stability</label>
+  <label class="option"><input type="radio" name="q6" value="Neutral dynamic stability"> Neutral dynamic stability</label>
+  <label class="option"><input type="radio" name="q6" value="Negative dynamic stability"> Negative dynamic stability</label>
+  <label class="option"><input type="radio" name="q6" value="Static stability"> Static stability</label>
+  <button onclick="submitAnswer(6, `Positive dynamic stability`, `Positive dynamic stability refers to oscillations that dampen and disappear over time, returning to equilibrium.`)">Submit</button>
+  <div id="explanation6" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q7">
+  <p><strong>Q8. What does neutral dynamic stability imply about an aircraft’s response over time to a disturbance?</strong></p>
+  <label class="option"><input type="radio" name="q7" value="Oscillations stop immediately"> Oscillations stop immediately</label>
+  <label class="option"><input type="radio" name="q7" value="Oscillations grow with time"> Oscillations grow with time</label>
+  <label class="option"><input type="radio" name="q7" value="Oscillations remain at the same amplitude"> Oscillations remain at the same amplitude</label>
+  <label class="option"><input type="radio" name="q7" value="No oscillations occur"> No oscillations occur</label>
+  <button onclick="submitAnswer(7, `Oscillations remain at the same amplitude`, `Neutral dynamic stability means oscillations neither grow nor decay and continue indefinitely.`)">Submit</button>
+  <div id="explanation7" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q8">
+  <p><strong>Q9. Which type of dynamic stability results in oscillations that increase over time?</strong></p>
+  <label class="option"><input type="radio" name="q8" value="Positive dynamic stability"> Positive dynamic stability</label>
+  <label class="option"><input type="radio" name="q8" value="Neutral static stability"> Neutral static stability</label>
+  <label class="option"><input type="radio" name="q8" value="Negative dynamic stability"> Negative dynamic stability</label>
+  <label class="option"><input type="radio" name="q8" value="Rotational instability"> Rotational instability</label>
+  <button onclick="submitAnswer(8, `Negative dynamic stability`, `Negative dynamic stability means the aircraft becomes increasingly unstable over time due to growing oscillations.`)">Submit</button>
+  <div id="explanation8" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q9">
+  <p><strong>Q10. Which concept refers to the tendency of an aircraft to return to a trimmed state after a disturbance?</strong></p>
+  <label class="option"><input type="radio" name="q9" value="Static pressure"> Static pressure</label>
+  <label class="option"><input type="radio" name="q9" value="Dynamic lift"> Dynamic lift</label>
+  <label class="option"><input type="radio" name="q9" value="Stability"> Stability</label>
+  <label class="option"><input type="radio" name="q9" value="Camber"> Camber</label>
+  <button onclick="submitAnswer(9, `Stability`, `Stability refers to the aircraft’s natural tendency to return to trimmed flight after a disturbance.`)">Submit</button>
+  <div id="explanation9" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q10">
+  <p><strong>Q11. Which type of stability is described by the aircraft's *initial* response to a disturbance?</strong></p>
+  <label class="option"><input type="radio" name="q10" value="Dynamic stability"> Dynamic stability</label>
+  <label class="option"><input type="radio" name="q10" value="Longitudinal stability"> Longitudinal stability</label>
+  <label class="option"><input type="radio" name="q10" value="Static stability"> Static stability</label>
+  <label class="option"><input type="radio" name="q10" value="Lateral stability"> Lateral stability</label>
+  <button onclick="submitAnswer(10, `Static stability`, `Static stability refers to the immediate, initial tendency of an aircraft after a disturbance.`)">Submit</button>
+  <div id="explanation10" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q11">
+  <p><strong>Q12. In positive dynamic stability, what happens to aircraft oscillations over time?</strong></p>
+  <label class="option"><input type="radio" name="q11" value="They increase"> They increase</label>
+  <label class="option"><input type="radio" name="q11" value="They stop immediately"> They stop immediately</label>
+  <label class="option"><input type="radio" name="q11" value="They remain constant"> They remain constant</label>
+  <label class="option"><input type="radio" name="q11" value="They decrease until equilibrium is reached"> They decrease until equilibrium is reached</label>
+  <button onclick="submitAnswer(11, `They decrease until equilibrium is reached`, `Positive dynamic stability causes oscillations to dampen and return to equilibrium.`)">Submit</button>
+  <div id="explanation11" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q12">
+  <p><strong>Q13. Which scenario is a sign of negative static stability?</strong></p>
+  <label class="option"><input type="radio" name="q12" value="Aircraft returns to trimmed position"> Aircraft returns to trimmed position</label>
+  <label class="option"><input type="radio" name="q12" value="Aircraft maintains new attitude"> Aircraft maintains new attitude</label>
+  <label class="option"><input type="radio" name="q12" value="Aircraft diverges away from original position"> Aircraft diverges away from original position</label>
+  <label class="option"><input type="radio" name="q12" value="Aircraft stops all motion"> Aircraft stops all motion</label>
+  <button onclick="submitAnswer(12, `Aircraft diverges away from original position`, `Negative static stability means the aircraft continues moving away from its original attitude after disturbance.`)">Submit</button>
+  <div id="explanation12" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q13">
+  <p><strong>Q14. What would be observed in an aircraft with neutral static stability after a gust pushes the nose up?</strong></p>
+  <label class="option"><input type="radio" name="q13" value="It returns nose down immediately"> It returns nose down immediately</label>
+  <label class="option"><input type="radio" name="q13" value="It maintains the new nose-up attitude"> It maintains the new nose-up attitude</label>
+  <label class="option"><input type="radio" name="q13" value="It pitches further up"> It pitches further up</label>
+  <label class="option"><input type="radio" name="q13" value="It enters a stall"> It enters a stall</label>
+  <button onclick="submitAnswer(13, `It maintains the new nose-up attitude`, `Neutral static stability means the aircraft holds the new disturbed position without correction.`)">Submit</button>
+  <div id="explanation13" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q14">
+  <p><strong>Q15. Why is negative dynamic stability a dangerous trait in aircraft design?</strong></p>
+  <label class="option"><input type="radio" name="q14" value="It causes fuel imbalance"> It causes fuel imbalance</label>
+  <label class="option"><input type="radio" name="q14" value="It increases oscillation amplitude over time"> It increases oscillation amplitude over time</label>
+  <label class="option"><input type="radio" name="q14" value="It prevents stall recovery"> It prevents stall recovery</label>
+  <label class="option"><input type="radio" name="q14" value="It prevents engine operation"> It prevents engine operation</label>
+  <button onclick="submitAnswer(14, `It increases oscillation amplitude over time`, `Negative dynamic stability means the aircraft's motion grows more unstable with time after disturbance.`)">Submit</button>
+  <div id="explanation14" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q15">
+  <p><strong>Q16. What type of motion does dynamic stability primarily evaluate?</strong></p>
+  <label class="option"><input type="radio" name="q15" value="Initial response only"> Initial response only</label>
+  <label class="option"><input type="radio" name="q15" value="Long-term behavior after disturbance"> Long-term behavior after disturbance</label>
+  <label class="option"><input type="radio" name="q15" value="Yaw stability"> Yaw stability</label>
+  <label class="option"><input type="radio" name="q15" value="Structural stress"> Structural stress</label>
+  <button onclick="submitAnswer(15, `Long-term behavior after disturbance`, `Dynamic stability refers to the aircraft's behavior over time following an initial disturbance.`)">Submit</button>
+  <div id="explanation15" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q16">
+  <p><strong>Q17. Which of the following aircraft would likely have neutral dynamic stability?</strong></p>
+  <label class="option"><input type="radio" name="q16" value="Aircraft with rapid oscillation damping"> Aircraft with rapid oscillation damping</label>
+  <label class="option"><input type="radio" name="q16" value="Aircraft with growing oscillations"> Aircraft with growing oscillations</label>
+  <label class="option"><input type="radio" name="q16" value="Aircraft with continuous undamped oscillations"> Aircraft with continuous undamped oscillations</label>
+  <label class="option"><input type="radio" name="q16" value="Aircraft with rigid wings"> Aircraft with rigid wings</label>
+  <button onclick="submitAnswer(16, `Aircraft with continuous undamped oscillations`, `Neutral dynamic stability means the oscillations continue at a constant amplitude indefinitely.`)">Submit</button>
+  <div id="explanation16" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q17">
+  <p><strong>Q18. What causes a sudden nose-down pitch in a stalled wing?</strong></p>
+  <label class="option"><input type="radio" name="q17" value="Forward shift of center of gravity"> Forward shift of center of gravity</label>
+  <label class="option"><input type="radio" name="q17" value="Excessive drag"> Excessive drag</label>
+  <label class="option"><input type="radio" name="q17" value="Rearward movement of center of pressure"> Rearward movement of center of pressure</label>
+  <label class="option"><input type="radio" name="q17" value="Elevator trim error"> Elevator trim error</label>
+  <button onclick="submitAnswer(17, `Rearward movement of center of pressure`, `As stall occurs, the center of pressure shifts back, creating a nose-down pitching moment.`)">Submit</button>
+  <div id="explanation17" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q18">
+  <p><strong>Q19. What is the best example of an aircraft with positive static and dynamic stability?</strong></p>
+  <label class="option"><input type="radio" name="q18" value="Fighter jet"> Fighter jet</label>
+  <label class="option"><input type="radio" name="q18" value="Cessna 172"> Cessna 172</label>
+  <label class="option"><input type="radio" name="q18" value="Jet glider"> Jet glider</label>
+  <label class="option"><input type="radio" name="q18" value="RC aerobatic drone"> RC aerobatic drone</label>
+  <button onclick="submitAnswer(18, `Cessna 172`, `The Cessna 172 is designed to be stable in both static and dynamic conditions, ideal for training.`)">Submit</button>
+  <div id="explanation18" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q19">
+  <p><strong>Q20. What kind of aircraft stability requires the center of gravity to be ahead of the center of pressure?</strong></p>
+  <label class="option"><input type="radio" name="q19" value="Longitudinal stability"> Longitudinal stability</label>
+  <label class="option"><input type="radio" name="q19" value="Lateral stability"> Lateral stability</label>
+  <label class="option"><input type="radio" name="q19" value="Directional stability"> Directional stability</label>
+  <label class="option"><input type="radio" name="q19" value="Vertical stability"> Vertical stability</label>
+  <button onclick="submitAnswer(19, `Longitudinal stability`, `For longitudinal stability, the CG must be ahead of the center of pressure for a restoring moment.`)">Submit</button>
+  <div id="explanation19" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q20">
+  <p><strong>Q21. Which type of aircraft would benefit most from neutral or negative static stability?</strong></p>
+  <label class="option"><input type="radio" name="q20" value="Passenger airliners"> Passenger airliners</label>
+  <label class="option"><input type="radio" name="q20" value="Cargo planes"> Cargo planes</label>
+  <label class="option"><input type="radio" name="q20" value="Fighter jets"> Fighter jets</label>
+  <label class="option"><input type="radio" name="q20" value="Helicopters"> Helicopters</label>
+  <button onclick="submitAnswer(20, `Fighter jets`, `Fighter jets require extreme maneuverability and use computers to manage intentional instability.`)">Submit</button>
+  <div id="explanation20" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q21">
+  <p><strong>Q22. What effect does positive static stability have immediately after a pitch-up disturbance?</strong></p>
+  <label class="option"><input type="radio" name="q21" value="Aircraft remains nose-up"> Aircraft remains nose-up</label>
+  <label class="option"><input type="radio" name="q21" value="Aircraft returns to level flight"> Aircraft returns to level flight</label>
+  <label class="option"><input type="radio" name="q21" value="Aircraft begins to roll"> Aircraft begins to roll</label>
+  <label class="option"><input type="radio" name="q21" value="Aircraft stalls"> Aircraft stalls</label>
+  <button onclick="submitAnswer(21, `Aircraft returns to level flight`, `With positive static stability, the aircraft resists displacement and returns to trimmed position.`)">Submit</button>
+  <div id="explanation21" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q22">
+  <p><strong>Q23. What best describes static and dynamic stability together?</strong></p>
+  <label class="option"><input type="radio" name="q22" value="Initial and long-term stability behavior"> Initial and long-term stability behavior</label>
+  <label class="option"><input type="radio" name="q22" value="Lift and drag forces acting together"> Lift and drag forces acting together</label>
+  <label class="option"><input type="radio" name="q22" value="Longitudinal and lateral balance"> Longitudinal and lateral balance</label>
+  <label class="option"><input type="radio" name="q22" value="Aircraft center of pressure motion"> Aircraft center of pressure motion</label>
+  <button onclick="submitAnswer(22, `Initial and long-term stability behavior`, `Static stability is the initial reaction; dynamic stability is how it plays out over time.`)">Submit</button>
+  <div id="explanation22" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q23">
+  <p><strong>Q24. Why is the study of stability crucial in aircraft design?</strong></p>
+  <label class="option"><input type="radio" name="q23" value="It determines fuel economy"> It determines fuel economy</label>
+  <label class="option"><input type="radio" name="q23" value="It defines passenger comfort zones"> It defines passenger comfort zones</label>
+  <label class="option"><input type="radio" name="q23" value="It ensures predictable aircraft response to disturbances"> It ensures predictable aircraft response to disturbances</label>
+  <label class="option"><input type="radio" name="q23" value="It helps with engine calibration"> It helps with engine calibration</label>
+  <button onclick="submitAnswer(23, `It ensures predictable aircraft response to disturbances`, `Aircraft stability ensures safe, controlled, and predictable behavior in turbulent or disturbed conditions.`)">Submit</button>
+  <div id="explanation23" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q24">
+  <p><strong>Q25. If an aircraft returns to its original position slowly and without oscillations, it demonstrates:</strong></p>
+  <label class="option"><input type="radio" name="q24" value="Positive static, negative dynamic stability"> Positive static, negative dynamic stability</label>
+  <label class="option"><input type="radio" name="q24" value="Neutral static, positive dynamic stability"> Neutral static, positive dynamic stability</label>
+  <label class="option"><input type="radio" name="q24" value="Positive static, positive dynamic stability"> Positive static, positive dynamic stability</label>
+  <label class="option"><input type="radio" name="q24" value="Negative static, neutral dynamic stability"> Negative static, neutral dynamic stability</label>
+  <button onclick="submitAnswer(24, `Positive static, positive dynamic stability`, `This describes both immediate correction and damped oscillations over time—both stabilities are positive.`)">Submit</button>
+  <div id="explanation24" style="margin-top:10px;"></div>
+</div>
+
+</div>
+<div id="summary">
+  <h2>Quiz Summary</h2>
+  <p id="score"></p>
+</div>
+<script>
+let submittedCount = 0;
+let correctCount = 0;
+
+function submitAnswer(qIndex, correctAnswer, explanationText) {
+  const box = document.getElementById('q' + qIndex);
+  if (box.classList.contains('submitted')) return;
+
+  const options = box.querySelectorAll('input');
+  let selected = null;
+  options.forEach(opt => { if (opt.checked) selected = opt.value; });
+  if (!selected) return;
+
+  options.forEach(opt => {
+    opt.disabled = true;
+    const label = opt.parentElement;
+    if (opt.value === correctAnswer) label.classList.add('highlight-correct');
+    if (opt.checked && opt.value === correctAnswer) label.classList.add('correct');
+    if (opt.checked && opt.value !== correctAnswer) label.classList.add('incorrect');
+  });
+
+  document.getElementById('explanation' + qIndex).innerHTML =
+    '<strong>Explanation:</strong> ' + explanationText;
+
+  if (selected === correctAnswer) correctCount++;
+  submittedCount++;
+  box.classList.add('submitted');
+  if (submittedCount === 25) {
+    document.getElementById('summary').style.display = 'block';
+    document.getElementById('score').innerText = 'You answered ' + correctCount + ' out of 25 correctly.';
+  }
+}
+
+let time = 1800;
+function updateTimer() {
+  let minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+  document.querySelector('.time-val').textContent = minutes + ':' + seconds.toString().padStart(2, '0');
+  if (time > 0) {
+    time--;
+    setTimeout(updateTimer, 1000);
+  } else {
+    document.querySelectorAll("button").forEach(btn => btn.disabled = true);
+    document.getElementById('summary').style.display = 'block';
+    document.getElementById('score').innerText = 'Time\'s up! You answered ' + correctCount + ' out of 25 correctly.';
+  }
+}
+updateTimer();
+</script>
+</body>
+</html>
