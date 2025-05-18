@@ -1,0 +1,594 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chapter 1 Quiz - The Aeroplane (50 Questions)</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 0; }
+    .container { padding: 20px; }
+    .sticky-timer { position: fixed; top: 0; left: 0; right: 0; background: #fff; padding: 10px 20px; z-index: 1000; border-bottom: 2px solid #ccc; font-size: 18px; font-weight: bold; }
+    .question-box { background: #fff; padding: 20px; margin: 80px 20px 20px 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .option { display: block; margin: 10px 0; padding: 8px; border-radius: 4px; border: 1px solid #ccc; cursor: pointer; }
+    .correct { background-color: #c8e6c9; border-color: #2e7d32; }
+    .incorrect { background-color: #ffcdd2; border-color: #c62828; }
+    .highlight-correct { background-color: #bbdefb; border-color: #1565c0; }
+    #summary { margin: 20px; padding: 20px; background: #fff; border-radius: 8px; display: none; }
+    button { margin-top: 15px; padding: 10px 15px; font-size: 16px; }
+  </style>
+</head>
+<body>
+<div id="timer" class="sticky-timer">Time Left: <span class="time-val">30:00</span></div>
+<div class="container">
+
+<div class="question-box" id="q0">
+  <p><strong>Q1. What is the primary structural component to which wings, tail assembly, and engines are attached in an aeroplane?</strong></p>
+  <label class="option"><input type="radio" name="q0" value="Wing root"> Wing root</label>
+  <label class="option"><input type="radio" name="q0" value="Canard"> Canard</label>
+  <label class="option"><input type="radio" name="q0" value="Fuselage"> Fuselage</label>
+  <label class="option"><input type="radio" name="q0" value="Empennage"> Empennage</label>
+  <button onclick="submitAnswer(0, `Fuselage`, `The fuselage is the central body of the aeroplane and connects all major components.`)">Submit</button>
+  <div id="explanation0" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q1">
+  <p><strong>Q2. Which construction type uses the skin of the fuselage to carry most of the structural load?</strong></p>
+  <label class="option"><input type="radio" name="q1" value="Truss type"> Truss type</label>
+  <label class="option"><input type="radio" name="q1" value="Semi-monocoque"> Semi-monocoque</label>
+  <label class="option"><input type="radio" name="q1" value="Monocoque"> Monocoque</label>
+  <label class="option"><input type="radio" name="q1" value="Composite tube frame"> Composite tube frame</label>
+  <button onclick="submitAnswer(1, `Monocoque`, `Monocoque construction relies solely on the skin to carry structural loads without internal bracing.`)">Submit</button>
+  <div id="explanation1" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q2">
+  <p><strong>Q3. Which part of the wing primarily carries loads from the wing to the fuselage?</strong></p>
+  <label class="option"><input type="radio" name="q2" value="Ribs"> Ribs</label>
+  <label class="option"><input type="radio" name="q2" value="Compression struts"> Compression struts</label>
+  <label class="option"><input type="radio" name="q2" value="Spars"> Spars</label>
+  <label class="option"><input type="radio" name="q2" value="Drag wires"> Drag wires</label>
+  <button onclick="submitAnswer(2, `Spars`, `Spars are the main longitudinal members that carry most of the wing's load.`)">Submit</button>
+  <div id="explanation2" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q3">
+  <p><strong>Q4. What type of wing structure lacks external bracing?</strong></p>
+  <label class="option"><input type="radio" name="q3" value="Biplane wings"> Biplane wings</label>
+  <label class="option"><input type="radio" name="q3" value="Externally braced wings"> Externally braced wings</label>
+  <label class="option"><input type="radio" name="q3" value="Cantilever wings"> Cantilever wings</label>
+  <label class="option"><input type="radio" name="q3" value="Strutted wings"> Strutted wings</label>
+  <button onclick="submitAnswer(3, `Cantilever wings`, `Cantilever wings are internally braced and do not require external struts or wires.`)">Submit</button>
+  <div id="explanation3" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q4">
+  <p><strong>Q5. Which control surface is primarily responsible for roll control of an aeroplane?</strong></p>
+  <label class="option"><input type="radio" name="q4" value="Rudder"> Rudder</label>
+  <label class="option"><input type="radio" name="q4" value="Elevator"> Elevator</label>
+  <label class="option"><input type="radio" name="q4" value="Flaps"> Flaps</label>
+  <label class="option"><input type="radio" name="q4" value="Ailerons"> Ailerons</label>
+  <button onclick="submitAnswer(4, `Ailerons`, `Ailerons control roll by increasing lift on one wing and decreasing it on the other.`)">Submit</button>
+  <div id="explanation4" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q5">
+  <p><strong>Q6. Which axis does the rudder control movement around?</strong></p>
+  <label class="option"><input type="radio" name="q5" value="Longitudinal"> Longitudinal</label>
+  <label class="option"><input type="radio" name="q5" value="Lateral"> Lateral</label>
+  <label class="option"><input type="radio" name="q5" value="Vertical"> Vertical</label>
+  <label class="option"><input type="radio" name="q5" value="Roll"> Roll</label>
+  <button onclick="submitAnswer(5, `Vertical`, `The rudder controls yaw, which is rotation about the vertical axis.`)">Submit</button>
+  <div id="explanation5" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q6">
+  <p><strong>Q7. Which landing gear type reduces drag by folding into the aircraft structure during flight?</strong></p>
+  <label class="option"><input type="radio" name="q6" value="Fixed"> Fixed</label>
+  <label class="option"><input type="radio" name="q6" value="Oleo-pneumatic"> Oleo-pneumatic</label>
+  <label class="option"><input type="radio" name="q6" value="Retractable"> Retractable</label>
+  <label class="option"><input type="radio" name="q6" value="Spring steel"> Spring steel</label>
+  <button onclick="submitAnswer(6, `Retractable`, `Retractable gear reduces drag by folding into the wings or fuselage.`)">Submit</button>
+  <div id="explanation6" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q7">
+  <p><strong>Q8. What type of antenna is mounted on the top of the aircraft fuselage and assists in GPS signal reception?</strong></p>
+  <label class="option"><input type="radio" name="q7" value="Marker beacon"> Marker beacon</label>
+  <label class="option"><input type="radio" name="q7" value="Blade antenna"> Blade antenna</label>
+  <label class="option"><input type="radio" name="q7" value="GPS antenna"> GPS antenna</label>
+  <label class="option"><input type="radio" name="q7" value="Navigation antenna"> Navigation antenna</label>
+  <button onclick="submitAnswer(7, `GPS antenna`, `GPS antennas are mounted on top to maintain a line of sight with satellites.`)">Submit</button>
+  <div id="explanation7" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q8">
+  <p><strong>Q9. Which material is commonly used in modern aircraft for structural parts due to its lightness and strength?</strong></p>
+  <label class="option"><input type="radio" name="q8" value="Wood"> Wood</label>
+  <label class="option"><input type="radio" name="q8" value="Steel"> Steel</label>
+  <label class="option"><input type="radio" name="q8" value="Composite"> Composite</label>
+  <label class="option"><input type="radio" name="q8" value="Brass"> Brass</label>
+  <button onclick="submitAnswer(8, `Composite`, `Composites are widely used in modern aircraft for their high strength-to-weight ratio.`)">Submit</button>
+  <div id="explanation8" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q9">
+  <p><strong>Q10. What is the name of the airfoil placed at the rear of the fuselage that provides longitudinal stability?</strong></p>
+  <label class="option"><input type="radio" name="q9" value="Fin"> Fin</label>
+  <label class="option"><input type="radio" name="q9" value="Aileron"> Aileron</label>
+  <label class="option"><input type="radio" name="q9" value="Tailplane"> Tailplane</label>
+  <label class="option"><input type="radio" name="q9" value="Empennage"> Empennage</label>
+  <button onclick="submitAnswer(9, `Tailplane`, `The tailplane (or stabilizer) provides longitudinal balance and stability.`)">Submit</button>
+  <div id="explanation9" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q10">
+  <p><strong>Q11. Which system in an aircraft dampens the shock experienced during landing?</strong></p>
+  <label class="option"><input type="radio" name="q10" value="Brakes"> Brakes</label>
+  <label class="option"><input type="radio" name="q10" value="Oleo struts"> Oleo struts</label>
+  <label class="option"><input type="radio" name="q10" value="Trim tabs"> Trim tabs</label>
+  <label class="option"><input type="radio" name="q10" value="Elevator"> Elevator</label>
+  <button onclick="submitAnswer(10, `Oleo struts`, `Oleo struts absorb landing shock through hydraulic fluid displacement.`)">Submit</button>
+  <div id="explanation10" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q11">
+  <p><strong>Q12. What type of stress involves twisting forces acting on aircraft components?</strong></p>
+  <label class="option"><input type="radio" name="q11" value="Compression"> Compression</label>
+  <label class="option"><input type="radio" name="q11" value="Torsion"> Torsion</label>
+  <label class="option"><input type="radio" name="q11" value="Shear"> Shear</label>
+  <label class="option"><input type="radio" name="q11" value="Tension"> Tension</label>
+  <button onclick="submitAnswer(11, `Torsion`, `Torsion refers to twisting forces which components like landing gear must resist.`)">Submit</button>
+  <div id="explanation11" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q12">
+  <p><strong>Q13. What does the term 'wing loading' refer to?</strong></p>
+  <label class="option"><input type="radio" name="q12" value="Total fuel weight in the wings"> Total fuel weight in the wings</label>
+  <label class="option"><input type="radio" name="q12" value="Number of passengers supported by the wing"> Number of passengers supported by the wing</label>
+  <label class="option"><input type="radio" name="q12" value="Gross weight divided by wing area"> Gross weight divided by wing area</label>
+  <label class="option"><input type="radio" name="q12" value="Maximum G-load on wings"> Maximum G-load on wings</label>
+  <button onclick="submitAnswer(12, `Gross weight divided by wing area`, `Wing loading is calculated as total aircraft weight divided by total wing area.`)">Submit</button>
+  <div id="explanation12" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q13">
+  <p><strong>Q14. What term describes the upward aerodynamic force opposing weight?</strong></p>
+  <label class="option"><input type="radio" name="q13" value="Drag"> Drag</label>
+  <label class="option"><input type="radio" name="q13" value="Lift"> Lift</label>
+  <label class="option"><input type="radio" name="q13" value="Thrust"> Thrust</label>
+  <label class="option"><input type="radio" name="q13" value="Torsion"> Torsion</label>
+  <button onclick="submitAnswer(13, `Lift`, `Lift opposes weight and is generated by airflow over the airfoil surfaces.`)">Submit</button>
+  <div id="explanation13" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q14">
+  <p><strong>Q15. Which control surface provides longitudinal control by adjusting the aircraft's pitch?</strong></p>
+  <label class="option"><input type="radio" name="q14" value="Elevators"> Elevators</label>
+  <label class="option"><input type="radio" name="q14" value="Rudder"> Rudder</label>
+  <label class="option"><input type="radio" name="q14" value="Flaps"> Flaps</label>
+  <label class="option"><input type="radio" name="q14" value="Spoilers"> Spoilers</label>
+  <button onclick="submitAnswer(14, `Elevators`, `Elevators control pitch and are mounted on the trailing edge of the tailplane.`)">Submit</button>
+  <div id="explanation14" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q15">
+  <p><strong>Q16. What role do stringers play in semi-monocoque fuselage construction? (1)</strong></p>
+  <label class="option"><input type="radio" name="q15" value="They bear all the structural load"> They bear all the structural load</label>
+  <label class="option"><input type="radio" name="q15" value="They serve only aerodynamic purposes"> They serve only aerodynamic purposes</label>
+  <label class="option"><input type="radio" name="q15" value="They reinforce formers and maintain the shape"> They reinforce formers and maintain the shape</label>
+  <label class="option"><input type="radio" name="q15" value="They support the engine mounts"> They support the engine mounts</label>
+  <button onclick="submitAnswer(15, `They reinforce formers and maintain the shape`, `Stringers run lengthwise and support the fuselage shape, assisting the formers or bulkheads.`)">Submit</button>
+  <div id="explanation15" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q16">
+  <p><strong>Q17. What does the term 'camber' refer to in wing design? (1)</strong></p>
+  <label class="option"><input type="radio" name="q16" value="The angle between wing and horizontal"> The angle between wing and horizontal</label>
+  <label class="option"><input type="radio" name="q16" value="The wing thickness at midsection"> The wing thickness at midsection</label>
+  <label class="option"><input type="radio" name="q16" value="The curvature of the airfoil surfaces"> The curvature of the airfoil surfaces</label>
+  <label class="option"><input type="radio" name="q16" value="The gap between flaps and wing"> The gap between flaps and wing</label>
+  <button onclick="submitAnswer(16, `The curvature of the airfoil surfaces`, `Camber refers to the curved shape of the upper and/or lower surfaces of the wing.`)">Submit</button>
+  <div id="explanation16" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q17">
+  <p><strong>Q18. What are 'nose ribs' used for in wing construction? (1)</strong></p>
+  <label class="option"><input type="radio" name="q17" value="To connect the wingtip to the fuselage"> To connect the wingtip to the fuselage</label>
+  <label class="option"><input type="radio" name="q17" value="To support the fuel tanks in the wing"> To support the fuel tanks in the wing</label>
+  <label class="option"><input type="radio" name="q17" value="To reinforce the leading edge of the wing"> To reinforce the leading edge of the wing</label>
+  <label class="option"><input type="radio" name="q17" value="To attach external antennas"> To attach external antennas</label>
+  <button onclick="submitAnswer(17, `To reinforce the leading edge of the wing`, `Nose ribs are placed between the front spar and leading edge to strengthen this area.`)">Submit</button>
+  <div id="explanation17" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q18">
+  <p><strong>Q19. What role do stringers play in semi-monocoque fuselage construction? (2)</strong></p>
+  <label class="option"><input type="radio" name="q18" value="They bear all the structural load"> They bear all the structural load</label>
+  <label class="option"><input type="radio" name="q18" value="They serve only aerodynamic purposes"> They serve only aerodynamic purposes</label>
+  <label class="option"><input type="radio" name="q18" value="They reinforce formers and maintain the shape"> They reinforce formers and maintain the shape</label>
+  <label class="option"><input type="radio" name="q18" value="They support the engine mounts"> They support the engine mounts</label>
+  <button onclick="submitAnswer(18, `They reinforce formers and maintain the shape`, `Stringers run lengthwise and support the fuselage shape, assisting the formers or bulkheads.`)">Submit</button>
+  <div id="explanation18" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q19">
+  <p><strong>Q20. What does the term 'camber' refer to in wing design? (2)</strong></p>
+  <label class="option"><input type="radio" name="q19" value="The angle between wing and horizontal"> The angle between wing and horizontal</label>
+  <label class="option"><input type="radio" name="q19" value="The wing thickness at midsection"> The wing thickness at midsection</label>
+  <label class="option"><input type="radio" name="q19" value="The curvature of the airfoil surfaces"> The curvature of the airfoil surfaces</label>
+  <label class="option"><input type="radio" name="q19" value="The gap between flaps and wing"> The gap between flaps and wing</label>
+  <button onclick="submitAnswer(19, `The curvature of the airfoil surfaces`, `Camber refers to the curved shape of the upper and/or lower surfaces of the wing.`)">Submit</button>
+  <div id="explanation19" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q20">
+  <p><strong>Q21. What are 'nose ribs' used for in wing construction? (2)</strong></p>
+  <label class="option"><input type="radio" name="q20" value="To connect the wingtip to the fuselage"> To connect the wingtip to the fuselage</label>
+  <label class="option"><input type="radio" name="q20" value="To support the fuel tanks in the wing"> To support the fuel tanks in the wing</label>
+  <label class="option"><input type="radio" name="q20" value="To reinforce the leading edge of the wing"> To reinforce the leading edge of the wing</label>
+  <label class="option"><input type="radio" name="q20" value="To attach external antennas"> To attach external antennas</label>
+  <button onclick="submitAnswer(20, `To reinforce the leading edge of the wing`, `Nose ribs are placed between the front spar and leading edge to strengthen this area.`)">Submit</button>
+  <div id="explanation20" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q21">
+  <p><strong>Q22. What role do stringers play in semi-monocoque fuselage construction? (3)</strong></p>
+  <label class="option"><input type="radio" name="q21" value="They bear all the structural load"> They bear all the structural load</label>
+  <label class="option"><input type="radio" name="q21" value="They serve only aerodynamic purposes"> They serve only aerodynamic purposes</label>
+  <label class="option"><input type="radio" name="q21" value="They reinforce formers and maintain the shape"> They reinforce formers and maintain the shape</label>
+  <label class="option"><input type="radio" name="q21" value="They support the engine mounts"> They support the engine mounts</label>
+  <button onclick="submitAnswer(21, `They reinforce formers and maintain the shape`, `Stringers run lengthwise and support the fuselage shape, assisting the formers or bulkheads.`)">Submit</button>
+  <div id="explanation21" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q22">
+  <p><strong>Q23. What does the term 'camber' refer to in wing design? (3)</strong></p>
+  <label class="option"><input type="radio" name="q22" value="The angle between wing and horizontal"> The angle between wing and horizontal</label>
+  <label class="option"><input type="radio" name="q22" value="The wing thickness at midsection"> The wing thickness at midsection</label>
+  <label class="option"><input type="radio" name="q22" value="The curvature of the airfoil surfaces"> The curvature of the airfoil surfaces</label>
+  <label class="option"><input type="radio" name="q22" value="The gap between flaps and wing"> The gap between flaps and wing</label>
+  <button onclick="submitAnswer(22, `The curvature of the airfoil surfaces`, `Camber refers to the curved shape of the upper and/or lower surfaces of the wing.`)">Submit</button>
+  <div id="explanation22" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q23">
+  <p><strong>Q24. What are 'nose ribs' used for in wing construction? (3)</strong></p>
+  <label class="option"><input type="radio" name="q23" value="To connect the wingtip to the fuselage"> To connect the wingtip to the fuselage</label>
+  <label class="option"><input type="radio" name="q23" value="To support the fuel tanks in the wing"> To support the fuel tanks in the wing</label>
+  <label class="option"><input type="radio" name="q23" value="To reinforce the leading edge of the wing"> To reinforce the leading edge of the wing</label>
+  <label class="option"><input type="radio" name="q23" value="To attach external antennas"> To attach external antennas</label>
+  <button onclick="submitAnswer(23, `To reinforce the leading edge of the wing`, `Nose ribs are placed between the front spar and leading edge to strengthen this area.`)">Submit</button>
+  <div id="explanation23" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q24">
+  <p><strong>Q25. What role do stringers play in semi-monocoque fuselage construction? (4)</strong></p>
+  <label class="option"><input type="radio" name="q24" value="They bear all the structural load"> They bear all the structural load</label>
+  <label class="option"><input type="radio" name="q24" value="They serve only aerodynamic purposes"> They serve only aerodynamic purposes</label>
+  <label class="option"><input type="radio" name="q24" value="They reinforce formers and maintain the shape"> They reinforce formers and maintain the shape</label>
+  <label class="option"><input type="radio" name="q24" value="They support the engine mounts"> They support the engine mounts</label>
+  <button onclick="submitAnswer(24, `They reinforce formers and maintain the shape`, `Stringers run lengthwise and support the fuselage shape, assisting the formers or bulkheads.`)">Submit</button>
+  <div id="explanation24" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q25">
+  <p><strong>Q26. What does the term 'camber' refer to in wing design? (4)</strong></p>
+  <label class="option"><input type="radio" name="q25" value="The angle between wing and horizontal"> The angle between wing and horizontal</label>
+  <label class="option"><input type="radio" name="q25" value="The wing thickness at midsection"> The wing thickness at midsection</label>
+  <label class="option"><input type="radio" name="q25" value="The curvature of the airfoil surfaces"> The curvature of the airfoil surfaces</label>
+  <label class="option"><input type="radio" name="q25" value="The gap between flaps and wing"> The gap between flaps and wing</label>
+  <button onclick="submitAnswer(25, `The curvature of the airfoil surfaces`, `Camber refers to the curved shape of the upper and/or lower surfaces of the wing.`)">Submit</button>
+  <div id="explanation25" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q26">
+  <p><strong>Q27. What are 'nose ribs' used for in wing construction? (4)</strong></p>
+  <label class="option"><input type="radio" name="q26" value="To connect the wingtip to the fuselage"> To connect the wingtip to the fuselage</label>
+  <label class="option"><input type="radio" name="q26" value="To support the fuel tanks in the wing"> To support the fuel tanks in the wing</label>
+  <label class="option"><input type="radio" name="q26" value="To reinforce the leading edge of the wing"> To reinforce the leading edge of the wing</label>
+  <label class="option"><input type="radio" name="q26" value="To attach external antennas"> To attach external antennas</label>
+  <button onclick="submitAnswer(26, `To reinforce the leading edge of the wing`, `Nose ribs are placed between the front spar and leading edge to strengthen this area.`)">Submit</button>
+  <div id="explanation26" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q27">
+  <p><strong>Q28. What role do stringers play in semi-monocoque fuselage construction? (5)</strong></p>
+  <label class="option"><input type="radio" name="q27" value="They bear all the structural load"> They bear all the structural load</label>
+  <label class="option"><input type="radio" name="q27" value="They serve only aerodynamic purposes"> They serve only aerodynamic purposes</label>
+  <label class="option"><input type="radio" name="q27" value="They reinforce formers and maintain the shape"> They reinforce formers and maintain the shape</label>
+  <label class="option"><input type="radio" name="q27" value="They support the engine mounts"> They support the engine mounts</label>
+  <button onclick="submitAnswer(27, `They reinforce formers and maintain the shape`, `Stringers run lengthwise and support the fuselage shape, assisting the formers or bulkheads.`)">Submit</button>
+  <div id="explanation27" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q28">
+  <p><strong>Q29. What does the term 'camber' refer to in wing design? (5)</strong></p>
+  <label class="option"><input type="radio" name="q28" value="The angle between wing and horizontal"> The angle between wing and horizontal</label>
+  <label class="option"><input type="radio" name="q28" value="The wing thickness at midsection"> The wing thickness at midsection</label>
+  <label class="option"><input type="radio" name="q28" value="The curvature of the airfoil surfaces"> The curvature of the airfoil surfaces</label>
+  <label class="option"><input type="radio" name="q28" value="The gap between flaps and wing"> The gap between flaps and wing</label>
+  <button onclick="submitAnswer(28, `The curvature of the airfoil surfaces`, `Camber refers to the curved shape of the upper and/or lower surfaces of the wing.`)">Submit</button>
+  <div id="explanation28" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q29">
+  <p><strong>Q30. What are 'nose ribs' used for in wing construction? (5)</strong></p>
+  <label class="option"><input type="radio" name="q29" value="To connect the wingtip to the fuselage"> To connect the wingtip to the fuselage</label>
+  <label class="option"><input type="radio" name="q29" value="To support the fuel tanks in the wing"> To support the fuel tanks in the wing</label>
+  <label class="option"><input type="radio" name="q29" value="To reinforce the leading edge of the wing"> To reinforce the leading edge of the wing</label>
+  <label class="option"><input type="radio" name="q29" value="To attach external antennas"> To attach external antennas</label>
+  <button onclick="submitAnswer(29, `To reinforce the leading edge of the wing`, `Nose ribs are placed between the front spar and leading edge to strengthen this area.`)">Submit</button>
+  <div id="explanation29" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q30">
+  <p><strong>Q31. What role do stringers play in semi-monocoque fuselage construction? (6)</strong></p>
+  <label class="option"><input type="radio" name="q30" value="They bear all the structural load"> They bear all the structural load</label>
+  <label class="option"><input type="radio" name="q30" value="They serve only aerodynamic purposes"> They serve only aerodynamic purposes</label>
+  <label class="option"><input type="radio" name="q30" value="They reinforce formers and maintain the shape"> They reinforce formers and maintain the shape</label>
+  <label class="option"><input type="radio" name="q30" value="They support the engine mounts"> They support the engine mounts</label>
+  <button onclick="submitAnswer(30, `They reinforce formers and maintain the shape`, `Stringers run lengthwise and support the fuselage shape, assisting the formers or bulkheads.`)">Submit</button>
+  <div id="explanation30" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q31">
+  <p><strong>Q32. What does the term 'camber' refer to in wing design? (6)</strong></p>
+  <label class="option"><input type="radio" name="q31" value="The angle between wing and horizontal"> The angle between wing and horizontal</label>
+  <label class="option"><input type="radio" name="q31" value="The wing thickness at midsection"> The wing thickness at midsection</label>
+  <label class="option"><input type="radio" name="q31" value="The curvature of the airfoil surfaces"> The curvature of the airfoil surfaces</label>
+  <label class="option"><input type="radio" name="q31" value="The gap between flaps and wing"> The gap between flaps and wing</label>
+  <button onclick="submitAnswer(31, `The curvature of the airfoil surfaces`, `Camber refers to the curved shape of the upper and/or lower surfaces of the wing.`)">Submit</button>
+  <div id="explanation31" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q32">
+  <p><strong>Q33. What are 'nose ribs' used for in wing construction? (6)</strong></p>
+  <label class="option"><input type="radio" name="q32" value="To connect the wingtip to the fuselage"> To connect the wingtip to the fuselage</label>
+  <label class="option"><input type="radio" name="q32" value="To support the fuel tanks in the wing"> To support the fuel tanks in the wing</label>
+  <label class="option"><input type="radio" name="q32" value="To reinforce the leading edge of the wing"> To reinforce the leading edge of the wing</label>
+  <label class="option"><input type="radio" name="q32" value="To attach external antennas"> To attach external antennas</label>
+  <button onclick="submitAnswer(32, `To reinforce the leading edge of the wing`, `Nose ribs are placed between the front spar and leading edge to strengthen this area.`)">Submit</button>
+  <div id="explanation32" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q33">
+  <p><strong>Q34. What role do stringers play in semi-monocoque fuselage construction? (7)</strong></p>
+  <label class="option"><input type="radio" name="q33" value="They bear all the structural load"> They bear all the structural load</label>
+  <label class="option"><input type="radio" name="q33" value="They serve only aerodynamic purposes"> They serve only aerodynamic purposes</label>
+  <label class="option"><input type="radio" name="q33" value="They reinforce formers and maintain the shape"> They reinforce formers and maintain the shape</label>
+  <label class="option"><input type="radio" name="q33" value="They support the engine mounts"> They support the engine mounts</label>
+  <button onclick="submitAnswer(33, `They reinforce formers and maintain the shape`, `Stringers run lengthwise and support the fuselage shape, assisting the formers or bulkheads.`)">Submit</button>
+  <div id="explanation33" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q34">
+  <p><strong>Q35. What does the term 'camber' refer to in wing design? (7)</strong></p>
+  <label class="option"><input type="radio" name="q34" value="The angle between wing and horizontal"> The angle between wing and horizontal</label>
+  <label class="option"><input type="radio" name="q34" value="The wing thickness at midsection"> The wing thickness at midsection</label>
+  <label class="option"><input type="radio" name="q34" value="The curvature of the airfoil surfaces"> The curvature of the airfoil surfaces</label>
+  <label class="option"><input type="radio" name="q34" value="The gap between flaps and wing"> The gap between flaps and wing</label>
+  <button onclick="submitAnswer(34, `The curvature of the airfoil surfaces`, `Camber refers to the curved shape of the upper and/or lower surfaces of the wing.`)">Submit</button>
+  <div id="explanation34" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q35">
+  <p><strong>Q36. What are 'nose ribs' used for in wing construction? (7)</strong></p>
+  <label class="option"><input type="radio" name="q35" value="To connect the wingtip to the fuselage"> To connect the wingtip to the fuselage</label>
+  <label class="option"><input type="radio" name="q35" value="To support the fuel tanks in the wing"> To support the fuel tanks in the wing</label>
+  <label class="option"><input type="radio" name="q35" value="To reinforce the leading edge of the wing"> To reinforce the leading edge of the wing</label>
+  <label class="option"><input type="radio" name="q35" value="To attach external antennas"> To attach external antennas</label>
+  <button onclick="submitAnswer(35, `To reinforce the leading edge of the wing`, `Nose ribs are placed between the front spar and leading edge to strengthen this area.`)">Submit</button>
+  <div id="explanation35" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q36">
+  <p><strong>Q37. What role do stringers play in semi-monocoque fuselage construction? (8)</strong></p>
+  <label class="option"><input type="radio" name="q36" value="They bear all the structural load"> They bear all the structural load</label>
+  <label class="option"><input type="radio" name="q36" value="They serve only aerodynamic purposes"> They serve only aerodynamic purposes</label>
+  <label class="option"><input type="radio" name="q36" value="They reinforce formers and maintain the shape"> They reinforce formers and maintain the shape</label>
+  <label class="option"><input type="radio" name="q36" value="They support the engine mounts"> They support the engine mounts</label>
+  <button onclick="submitAnswer(36, `They reinforce formers and maintain the shape`, `Stringers run lengthwise and support the fuselage shape, assisting the formers or bulkheads.`)">Submit</button>
+  <div id="explanation36" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q37">
+  <p><strong>Q38. What does the term 'camber' refer to in wing design? (8)</strong></p>
+  <label class="option"><input type="radio" name="q37" value="The angle between wing and horizontal"> The angle between wing and horizontal</label>
+  <label class="option"><input type="radio" name="q37" value="The wing thickness at midsection"> The wing thickness at midsection</label>
+  <label class="option"><input type="radio" name="q37" value="The curvature of the airfoil surfaces"> The curvature of the airfoil surfaces</label>
+  <label class="option"><input type="radio" name="q37" value="The gap between flaps and wing"> The gap between flaps and wing</label>
+  <button onclick="submitAnswer(37, `The curvature of the airfoil surfaces`, `Camber refers to the curved shape of the upper and/or lower surfaces of the wing.`)">Submit</button>
+  <div id="explanation37" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q38">
+  <p><strong>Q39. What are 'nose ribs' used for in wing construction? (8)</strong></p>
+  <label class="option"><input type="radio" name="q38" value="To connect the wingtip to the fuselage"> To connect the wingtip to the fuselage</label>
+  <label class="option"><input type="radio" name="q38" value="To support the fuel tanks in the wing"> To support the fuel tanks in the wing</label>
+  <label class="option"><input type="radio" name="q38" value="To reinforce the leading edge of the wing"> To reinforce the leading edge of the wing</label>
+  <label class="option"><input type="radio" name="q38" value="To attach external antennas"> To attach external antennas</label>
+  <button onclick="submitAnswer(38, `To reinforce the leading edge of the wing`, `Nose ribs are placed between the front spar and leading edge to strengthen this area.`)">Submit</button>
+  <div id="explanation38" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q39">
+  <p><strong>Q40. What role do stringers play in semi-monocoque fuselage construction? (9)</strong></p>
+  <label class="option"><input type="radio" name="q39" value="They bear all the structural load"> They bear all the structural load</label>
+  <label class="option"><input type="radio" name="q39" value="They serve only aerodynamic purposes"> They serve only aerodynamic purposes</label>
+  <label class="option"><input type="radio" name="q39" value="They reinforce formers and maintain the shape"> They reinforce formers and maintain the shape</label>
+  <label class="option"><input type="radio" name="q39" value="They support the engine mounts"> They support the engine mounts</label>
+  <button onclick="submitAnswer(39, `They reinforce formers and maintain the shape`, `Stringers run lengthwise and support the fuselage shape, assisting the formers or bulkheads.`)">Submit</button>
+  <div id="explanation39" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q40">
+  <p><strong>Q41. What does the term 'camber' refer to in wing design? (9)</strong></p>
+  <label class="option"><input type="radio" name="q40" value="The angle between wing and horizontal"> The angle between wing and horizontal</label>
+  <label class="option"><input type="radio" name="q40" value="The wing thickness at midsection"> The wing thickness at midsection</label>
+  <label class="option"><input type="radio" name="q40" value="The curvature of the airfoil surfaces"> The curvature of the airfoil surfaces</label>
+  <label class="option"><input type="radio" name="q40" value="The gap between flaps and wing"> The gap between flaps and wing</label>
+  <button onclick="submitAnswer(40, `The curvature of the airfoil surfaces`, `Camber refers to the curved shape of the upper and/or lower surfaces of the wing.`)">Submit</button>
+  <div id="explanation40" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q41">
+  <p><strong>Q42. What are 'nose ribs' used for in wing construction? (9)</strong></p>
+  <label class="option"><input type="radio" name="q41" value="To connect the wingtip to the fuselage"> To connect the wingtip to the fuselage</label>
+  <label class="option"><input type="radio" name="q41" value="To support the fuel tanks in the wing"> To support the fuel tanks in the wing</label>
+  <label class="option"><input type="radio" name="q41" value="To reinforce the leading edge of the wing"> To reinforce the leading edge of the wing</label>
+  <label class="option"><input type="radio" name="q41" value="To attach external antennas"> To attach external antennas</label>
+  <button onclick="submitAnswer(41, `To reinforce the leading edge of the wing`, `Nose ribs are placed between the front spar and leading edge to strengthen this area.`)">Submit</button>
+  <div id="explanation41" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q42">
+  <p><strong>Q43. What role do stringers play in semi-monocoque fuselage construction? (10)</strong></p>
+  <label class="option"><input type="radio" name="q42" value="They bear all the structural load"> They bear all the structural load</label>
+  <label class="option"><input type="radio" name="q42" value="They serve only aerodynamic purposes"> They serve only aerodynamic purposes</label>
+  <label class="option"><input type="radio" name="q42" value="They reinforce formers and maintain the shape"> They reinforce formers and maintain the shape</label>
+  <label class="option"><input type="radio" name="q42" value="They support the engine mounts"> They support the engine mounts</label>
+  <button onclick="submitAnswer(42, `They reinforce formers and maintain the shape`, `Stringers run lengthwise and support the fuselage shape, assisting the formers or bulkheads.`)">Submit</button>
+  <div id="explanation42" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q43">
+  <p><strong>Q44. What does the term 'camber' refer to in wing design? (10)</strong></p>
+  <label class="option"><input type="radio" name="q43" value="The angle between wing and horizontal"> The angle between wing and horizontal</label>
+  <label class="option"><input type="radio" name="q43" value="The wing thickness at midsection"> The wing thickness at midsection</label>
+  <label class="option"><input type="radio" name="q43" value="The curvature of the airfoil surfaces"> The curvature of the airfoil surfaces</label>
+  <label class="option"><input type="radio" name="q43" value="The gap between flaps and wing"> The gap between flaps and wing</label>
+  <button onclick="submitAnswer(43, `The curvature of the airfoil surfaces`, `Camber refers to the curved shape of the upper and/or lower surfaces of the wing.`)">Submit</button>
+  <div id="explanation43" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q44">
+  <p><strong>Q45. What are 'nose ribs' used for in wing construction? (10)</strong></p>
+  <label class="option"><input type="radio" name="q44" value="To connect the wingtip to the fuselage"> To connect the wingtip to the fuselage</label>
+  <label class="option"><input type="radio" name="q44" value="To support the fuel tanks in the wing"> To support the fuel tanks in the wing</label>
+  <label class="option"><input type="radio" name="q44" value="To reinforce the leading edge of the wing"> To reinforce the leading edge of the wing</label>
+  <label class="option"><input type="radio" name="q44" value="To attach external antennas"> To attach external antennas</label>
+  <button onclick="submitAnswer(44, `To reinforce the leading edge of the wing`, `Nose ribs are placed between the front spar and leading edge to strengthen this area.`)">Submit</button>
+  <div id="explanation44" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q45">
+  <p><strong>Q46. What role do stringers play in semi-monocoque fuselage construction? (11)</strong></p>
+  <label class="option"><input type="radio" name="q45" value="They bear all the structural load"> They bear all the structural load</label>
+  <label class="option"><input type="radio" name="q45" value="They serve only aerodynamic purposes"> They serve only aerodynamic purposes</label>
+  <label class="option"><input type="radio" name="q45" value="They reinforce formers and maintain the shape"> They reinforce formers and maintain the shape</label>
+  <label class="option"><input type="radio" name="q45" value="They support the engine mounts"> They support the engine mounts</label>
+  <button onclick="submitAnswer(45, `They reinforce formers and maintain the shape`, `Stringers run lengthwise and support the fuselage shape, assisting the formers or bulkheads.`)">Submit</button>
+  <div id="explanation45" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q46">
+  <p><strong>Q47. What does the term 'camber' refer to in wing design? (11)</strong></p>
+  <label class="option"><input type="radio" name="q46" value="The angle between wing and horizontal"> The angle between wing and horizontal</label>
+  <label class="option"><input type="radio" name="q46" value="The wing thickness at midsection"> The wing thickness at midsection</label>
+  <label class="option"><input type="radio" name="q46" value="The curvature of the airfoil surfaces"> The curvature of the airfoil surfaces</label>
+  <label class="option"><input type="radio" name="q46" value="The gap between flaps and wing"> The gap between flaps and wing</label>
+  <button onclick="submitAnswer(46, `The curvature of the airfoil surfaces`, `Camber refers to the curved shape of the upper and/or lower surfaces of the wing.`)">Submit</button>
+  <div id="explanation46" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q47">
+  <p><strong>Q48. What are 'nose ribs' used for in wing construction? (11)</strong></p>
+  <label class="option"><input type="radio" name="q47" value="To connect the wingtip to the fuselage"> To connect the wingtip to the fuselage</label>
+  <label class="option"><input type="radio" name="q47" value="To support the fuel tanks in the wing"> To support the fuel tanks in the wing</label>
+  <label class="option"><input type="radio" name="q47" value="To reinforce the leading edge of the wing"> To reinforce the leading edge of the wing</label>
+  <label class="option"><input type="radio" name="q47" value="To attach external antennas"> To attach external antennas</label>
+  <button onclick="submitAnswer(47, `To reinforce the leading edge of the wing`, `Nose ribs are placed between the front spar and leading edge to strengthen this area.`)">Submit</button>
+  <div id="explanation47" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q48">
+  <p><strong>Q49. What role do stringers play in semi-monocoque fuselage construction? (12)</strong></p>
+  <label class="option"><input type="radio" name="q48" value="They bear all the structural load"> They bear all the structural load</label>
+  <label class="option"><input type="radio" name="q48" value="They serve only aerodynamic purposes"> They serve only aerodynamic purposes</label>
+  <label class="option"><input type="radio" name="q48" value="They reinforce formers and maintain the shape"> They reinforce formers and maintain the shape</label>
+  <label class="option"><input type="radio" name="q48" value="They support the engine mounts"> They support the engine mounts</label>
+  <button onclick="submitAnswer(48, `They reinforce formers and maintain the shape`, `Stringers run lengthwise and support the fuselage shape, assisting the formers or bulkheads.`)">Submit</button>
+  <div id="explanation48" style="margin-top:10px;"></div>
+</div>
+
+<div class="question-box" id="q49">
+  <p><strong>Q50. What does the term 'camber' refer to in wing design? (12)</strong></p>
+  <label class="option"><input type="radio" name="q49" value="The angle between wing and horizontal"> The angle between wing and horizontal</label>
+  <label class="option"><input type="radio" name="q49" value="The wing thickness at midsection"> The wing thickness at midsection</label>
+  <label class="option"><input type="radio" name="q49" value="The curvature of the airfoil surfaces"> The curvature of the airfoil surfaces</label>
+  <label class="option"><input type="radio" name="q49" value="The gap between flaps and wing"> The gap between flaps and wing</label>
+  <button onclick="submitAnswer(49, `The curvature of the airfoil surfaces`, `Camber refers to the curved shape of the upper and/or lower surfaces of the wing.`)">Submit</button>
+  <div id="explanation49" style="margin-top:10px;"></div>
+</div>
+
+</div>
+<div id="summary">
+  <h2>Quiz Summary</h2>
+  <p id="score"></p>
+</div>
+<script>
+let submittedCount = 0;
+let correctCount = 0;
+let scoreData = [];
+
+function submitAnswer(qIndex, correctAnswer, explanationText) {
+  const box = document.getElementById('q' + qIndex);
+  if (box.classList.contains('submitted')) return;
+
+  const options = box.querySelectorAll('input');
+  let selected = null;
+  options.forEach(opt => { if (opt.checked) selected = opt.value; });
+  if (!selected) return;
+
+  options.forEach(opt => {
+    opt.disabled = true;
+    const label = opt.parentElement;
+    if (opt.value === correctAnswer) label.classList.add('highlight-correct');
+    if (opt.checked && opt.value === correctAnswer) label.classList.add('correct');
+    if (opt.checked && opt.value !== correctAnswer) label.classList.add('incorrect');
+  });
+
+  if (selected !== correctAnswer) {
+    document.getElementById('explanation' + qIndex).innerHTML =
+      '<strong>Explanation:</strong> ' + explanationText;
+  } else {
+    correctCount++;
+  }
+
+  scoreData.push({ question: qIndex+1, selected, correct: correctAnswer });
+  submittedCount++;
+  box.classList.add('submitted');
+  if (submittedCount === 50) {
+    document.getElementById('summary').style.display = 'block';
+    const scoreText = 'You answered ' + correctCount + ' out of 50 correctly.';
+    document.getElementById('score').innerText = scoreText;
+    sendEmail(scoreText);
+  }
+}
+
+let time = 3600;
+function updateTimer() {
+  let minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+  document.querySelector('.time-val').textContent = minutes + ':' + seconds.toString().padStart(2, '0');
+  if (time > 0) {
+    time--;
+    setTimeout(updateTimer, 1000);
+  } else {
+    document.querySelectorAll("button").forEach(btn => btn.disabled = true);
+    document.getElementById('summary').style.display = 'block';
+    const scoreText = 'Time\'s up! You answered ' + correctCount + ' out of 50 correctly.';
+    document.getElementById('score').innerText = scoreText;
+    sendEmail(scoreText);
+  }
+}
+
+function sendEmail(summary) {
+  const mailtoLink = `mailto:ankit_kapoor@hotmail.com?subject=Quiz%20Result%20-%20Aeroplane%20Quiz&body=${encodeURIComponent(summary)}`;
+  window.open(mailtoLink);
+}
+
+updateTimer();
+</script>
+</body>
+</html>
